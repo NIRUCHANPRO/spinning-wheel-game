@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Wheel Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add default sound files or remove if not needed -->
+    <audio id="spinSound" src="https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3"></audio>
+    <audio id="winSound" src="https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3"></audio>
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <button class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="coins">
+                <i class="fas fa-coins"></i>
+                <span id="score">7628</span>
+            </div>
+            <div class="timer">
+                <span id="timer">05:34</span>
+            </div>
+            <button class="menu-button">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+        </header>
+
+        <div class="wheel-container">
+            <div class="wheel">
+                <!-- Update segments with coin icons -->
+                <div class="segment" data-value="10">
+                    <i class="fas fa-coins"></i>
+                    <span>10</span>
+                </div>
+                <div class="segment" data-value="20">
+                    <i class="fas fa-coins"></i>
+                    <span>20</span>
+                </div>
+                <div class="segment" data-value="30">
+                    <i class="fas fa-coins"></i>
+                    <span>30</span>
+                </div>
+                <div class="segment" data-value="40">
+                    <i class="fas fa-coins"></i>
+                    <span>40</span>
+                </div>
+                <div class="segment" data-value="50">
+                    <i class="fas fa-coins"></i>
+                    <span>50</span>
+                </div>
+                <div class="segment" data-value="60">
+                    <i class="fas fa-coins"></i>
+                    <span>60</span>
+                </div>
+                <div class="segment" data-value="70">
+                    <i class="fas fa-coins"></i>
+                    <span>70</span>
+                </div>
+                <div class="segment" data-value="80">
+                    <i class="fas fa-coins"></i>
+                    <span>80</span>
+                </div>
+            </div>
+            <div class="pointer"></div>
+        </div>
+        
+        <button id="spinButton">Spin</button>
+
+        <!-- Add menu dropdown -->
+        <div class="menu-dropdown hidden">
+            <ul>
+                <li><i class="fas fa-cog"></i> Settings</li>
+                <li><i class="fas fa-question-circle"></i> Help</li>
+                <li><i class="fas fa-sign-out-alt"></i> Quit Game</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
